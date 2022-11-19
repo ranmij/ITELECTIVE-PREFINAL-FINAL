@@ -259,11 +259,11 @@ SELECT id, department_name FROM departments_tbl WHERE (id = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="profiles_tbl" msprop:Generator_RowEvHandlerName="profiles_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="profiles_tblRowDeleted" msprop:Generator_RowDeletingName="profiles_tblRowDeleting" msprop:Generator_RowEvArgName="profiles_tblRowChangeEvent" msprop:Generator_TablePropName="profiles_tbl" msprop:Generator_RowChangedName="profiles_tblRowChanged" msprop:Generator_RowChangingName="profiles_tblRowChanging" msprop:Generator_TableClassName="profiles_tblDataTable" msprop:Generator_RowClassName="profiles_tblRow" msprop:Generator_TableVarName="tableprofiles_tbl" msprop:Generator_UserTableName="profiles_tbl">
+        <xs:element name="profiles_tbl" msprop:Generator_RowClassName="profiles_tblRow" msprop:Generator_RowEvHandlerName="profiles_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="profiles_tblRowDeleted" msprop:Generator_RowDeletingName="profiles_tblRowDeleting" msprop:Generator_RowEvArgName="profiles_tblRowChangeEvent" msprop:Generator_TablePropName="profiles_tbl" msprop:Generator_RowChangedName="profiles_tblRowChanged" msprop:Generator_UserTableName="profiles_tbl" msprop:Generator_RowChangingName="profiles_tblRowChanging" msprop:Generator_TableClassName="profiles_tblDataTable" msprop:Generator_TableVarName="tableprofiles_tbl">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="image_path" msprop:Generator_ColumnPropNameInRow="image_path" msprop:Generator_ColumnPropNameInTable="image_pathColumn" msprop:Generator_ColumnVarNameInTable="columnimage_path" msprop:Generator_UserColumnName="image_path">
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="image_path" msprop:Generator_UserColumnName="image_path" msprop:Generator_ColumnPropNameInTable="image_pathColumn" msprop:Generator_ColumnPropNameInRow="image_path" msprop:Generator_ColumnVarNameInTable="columnimage_path">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
@@ -273,11 +273,11 @@ SELECT id, department_name FROM departments_tbl WHERE (id = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="departments_tbl" msprop:Generator_RowEvHandlerName="departments_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="departments_tblRowDeleted" msprop:Generator_RowDeletingName="departments_tblRowDeleting" msprop:Generator_RowEvArgName="departments_tblRowChangeEvent" msprop:Generator_TablePropName="departments_tbl" msprop:Generator_RowChangedName="departments_tblRowChanged" msprop:Generator_RowChangingName="departments_tblRowChanging" msprop:Generator_TableClassName="departments_tblDataTable" msprop:Generator_RowClassName="departments_tblRow" msprop:Generator_TableVarName="tabledepartments_tbl" msprop:Generator_UserTableName="departments_tbl">
+        <xs:element name="departments_tbl" msprop:Generator_RowClassName="departments_tblRow" msprop:Generator_RowEvHandlerName="departments_tblRowChangeEventHandler" msprop:Generator_RowDeletedName="departments_tblRowDeleted" msprop:Generator_RowDeletingName="departments_tblRowDeleting" msprop:Generator_RowEvArgName="departments_tblRowChangeEvent" msprop:Generator_TablePropName="departments_tbl" msprop:Generator_RowChangedName="departments_tblRowChanged" msprop:Generator_UserTableName="departments_tbl" msprop:Generator_RowChangingName="departments_tblRowChanging" msprop:Generator_TableClassName="departments_tblDataTable" msprop:Generator_TableVarName="tabledepartments_tbl">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="department_name" msprop:Generator_ColumnPropNameInRow="department_name" msprop:Generator_ColumnPropNameInTable="department_nameColumn" msprop:Generator_ColumnVarNameInTable="columndepartment_name" msprop:Generator_UserColumnName="department_name">
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="department_name" msprop:Generator_UserColumnName="department_name" msprop:Generator_ColumnPropNameInTable="department_nameColumn" msprop:Generator_ColumnPropNameInRow="department_name" msprop:Generator_ColumnVarNameInTable="columndepartment_name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />

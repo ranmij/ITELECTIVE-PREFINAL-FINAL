@@ -37,6 +37,7 @@ Partial Class Modal
         Me.genderData = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.contactData = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.addStudentImage = New Guna.UI2.WinForms.Guna2ImageButton()
         CType(Me.studentProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,7 +62,7 @@ Partial Class Modal
         Me.okBtn.FillColor = System.Drawing.Color.Black
         Me.okBtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.okBtn.ForeColor = System.Drawing.Color.White
-        Me.okBtn.Location = New System.Drawing.Point(340, 444)
+        Me.okBtn.Location = New System.Drawing.Point(293, 444)
         Me.okBtn.Name = "okBtn"
         Me.okBtn.Size = New System.Drawing.Size(111, 32)
         Me.okBtn.TabIndex = 0
@@ -71,10 +72,10 @@ Partial Class Modal
         '
         Me.studentProfilePicture.BackColor = System.Drawing.Color.Transparent
         Me.studentProfilePicture.ImageRotate = 0!
-        Me.studentProfilePicture.Location = New System.Drawing.Point(138, 64)
+        Me.studentProfilePicture.Location = New System.Drawing.Point(121, 65)
         Me.studentProfilePicture.Name = "studentProfilePicture"
         Me.studentProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.studentProfilePicture.Size = New System.Drawing.Size(190, 171)
+        Me.studentProfilePicture.Size = New System.Drawing.Size(179, 171)
         Me.studentProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.studentProfilePicture.TabIndex = 1
         Me.studentProfilePicture.TabStop = False
@@ -183,17 +184,36 @@ Partial Class Modal
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(138, 21)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(95, 22)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(205, 27)
         Me.Guna2HtmlLabel1.TabIndex = 12
         Me.Guna2HtmlLabel1.Text = "STUDENT INFORMATION"
         '
+        'addStudentImage
+        '
+        Me.addStudentImage.BackColor = System.Drawing.Color.Transparent
+        Me.addStudentImage.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.addStudentImage.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
+        Me.addStudentImage.HoverState.ImageSize = New System.Drawing.Size(24, 24)
+        Me.addStudentImage.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
+        Me.addStudentImage.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.addStudentImage.ImageRotate = 0!
+        Me.addStudentImage.ImageSize = New System.Drawing.Size(24, 24)
+        Me.addStudentImage.Location = New System.Drawing.Point(179, 124)
+        Me.addStudentImage.Name = "addStudentImage"
+        Me.addStudentImage.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
+        Me.addStudentImage.PressedState.ImageSize = New System.Drawing.Size(24, 24)
+        Me.addStudentImage.Size = New System.Drawing.Size(64, 54)
+        Me.addStudentImage.TabIndex = 13
+        Me.addStudentImage.UseTransparentBackground = True
+        '
         'Modal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(463, 488)
+        Me.ClientSize = New System.Drawing.Size(416, 488)
+        Me.Controls.Add(Me.addStudentImage)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.contactData)
         Me.Controls.Add(Me.genderData)
@@ -235,4 +255,5 @@ Partial Class Modal
     Friend WithEvents nameData As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents studentNoData As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents addStudentImage As Guna.UI2.WinForms.Guna2ImageButton
 End Class

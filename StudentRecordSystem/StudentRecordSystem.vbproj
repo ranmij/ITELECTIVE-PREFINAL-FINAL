@@ -98,6 +98,11 @@
     <Compile Include="Modal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProfilesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfilesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +167,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="ProfilesDataSet.xsc">
+      <DependentUpon>ProfilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProfilesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProfilesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProfilesDataSet.xss">
+      <DependentUpon>ProfilesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="srsdbDataSet1.xsc">
       <DependentUpon>srsdbDataSet1.xsd</DependentUpon>
     </None>
@@ -190,6 +206,7 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\upload.png" />
     <Content Include="srsdb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
