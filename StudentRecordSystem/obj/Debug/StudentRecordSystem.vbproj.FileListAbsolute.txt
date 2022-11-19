@@ -17,3 +17,4 @@ D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\obj\Debug\St
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\bin\Debug\srsdb.mdf
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\bin\Debug\srsdb_log.ldf
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\obj\Debug\StudentRecordSystem.Modal.resources
+D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\obj\Debug\StudentRecordSystem.StudentForm.resources

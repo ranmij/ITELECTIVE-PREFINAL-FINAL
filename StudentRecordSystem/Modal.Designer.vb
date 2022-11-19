@@ -36,7 +36,7 @@ Partial Class Modal
         Me.courseData = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.genderData = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.contactData = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.modalLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.addStudentImage = New Guna.UI2.WinForms.Guna2ImageButton()
         CType(Me.studentProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,24 +55,28 @@ Partial Class Modal
         Me.okBtn.AutoRoundedCorners = True
         Me.okBtn.BackColor = System.Drawing.Color.Transparent
         Me.okBtn.BorderRadius = 15
+        Me.okBtn.BorderThickness = 1
         Me.okBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.okBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.okBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.okBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.okBtn.FillColor = System.Drawing.Color.Black
+        Me.okBtn.FillColor = System.Drawing.Color.Transparent
         Me.okBtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.okBtn.ForeColor = System.Drawing.Color.White
+        Me.okBtn.ForeColor = System.Drawing.Color.Black
+        Me.okBtn.HoverState.FillColor = System.Drawing.Color.Black
+        Me.okBtn.HoverState.ForeColor = System.Drawing.Color.White
         Me.okBtn.Location = New System.Drawing.Point(293, 444)
         Me.okBtn.Name = "okBtn"
         Me.okBtn.Size = New System.Drawing.Size(111, 32)
         Me.okBtn.TabIndex = 0
-        Me.okBtn.Text = "Ok"
+        Me.okBtn.Text = "OK"
+        Me.okBtn.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase
         '
         'studentProfilePicture
         '
         Me.studentProfilePicture.BackColor = System.Drawing.Color.Transparent
         Me.studentProfilePicture.ImageRotate = 0!
-        Me.studentProfilePicture.Location = New System.Drawing.Point(121, 65)
+        Me.studentProfilePicture.Location = New System.Drawing.Point(106, 64)
         Me.studentProfilePicture.Name = "studentProfilePicture"
         Me.studentProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.studentProfilePicture.Size = New System.Drawing.Size(179, 171)
@@ -88,7 +92,7 @@ Partial Class Modal
         Me.nameLabel.Name = "nameLabel"
         Me.nameLabel.Size = New System.Drawing.Size(58, 27)
         Me.nameLabel.TabIndex = 2
-        Me.nameLabel.Text = "NAME:"
+        Me.nameLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.nameLabel
         '
         'genderLabel
         '
@@ -98,7 +102,7 @@ Partial Class Modal
         Me.genderLabel.Name = "genderLabel"
         Me.genderLabel.Size = New System.Drawing.Size(77, 27)
         Me.genderLabel.TabIndex = 3
-        Me.genderLabel.Text = "GENDER:"
+        Me.genderLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.genderLabel
         '
         'studentLabel
         '
@@ -108,7 +112,7 @@ Partial Class Modal
         Me.studentLabel.Name = "studentLabel"
         Me.studentLabel.Size = New System.Drawing.Size(116, 27)
         Me.studentLabel.TabIndex = 4
-        Me.studentLabel.Text = "STUDENT NO:"
+        Me.studentLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.studentNoLabel
         '
         'courseLabel
         '
@@ -118,7 +122,7 @@ Partial Class Modal
         Me.courseLabel.Name = "courseLabel"
         Me.courseLabel.Size = New System.Drawing.Size(75, 27)
         Me.courseLabel.TabIndex = 5
-        Me.courseLabel.Text = "COURSE:"
+        Me.courseLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.courseLabel
         '
         'contactLabel
         '
@@ -128,7 +132,7 @@ Partial Class Modal
         Me.contactLabel.Name = "contactLabel"
         Me.contactLabel.Size = New System.Drawing.Size(90, 27)
         Me.contactLabel.TabIndex = 6
-        Me.contactLabel.Text = "CONTACT:"
+        Me.contactLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.contactLabel
         '
         'studentNoData
         '
@@ -146,9 +150,9 @@ Partial Class Modal
         Me.nameData.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nameData.Location = New System.Drawing.Point(106, 285)
         Me.nameData.Name = "nameData"
-        Me.nameData.Size = New System.Drawing.Size(34, 27)
+        Me.nameData.Size = New System.Drawing.Size(46, 27)
         Me.nameData.TabIndex = 8
-        Me.nameData.Text = "Null"
+        Me.nameData.Text = Global.StudentRecordSystem.My.Resources.Resources.nullLabel
         '
         'courseData
         '
@@ -156,9 +160,9 @@ Partial Class Modal
         Me.courseData.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.courseData.Location = New System.Drawing.Point(123, 318)
         Me.courseData.Name = "courseData"
-        Me.courseData.Size = New System.Drawing.Size(34, 27)
+        Me.courseData.Size = New System.Drawing.Size(46, 27)
         Me.courseData.TabIndex = 9
-        Me.courseData.Text = "Null"
+        Me.courseData.Text = Global.StudentRecordSystem.My.Resources.Resources.nullLabel
         '
         'genderData
         '
@@ -166,9 +170,9 @@ Partial Class Modal
         Me.genderData.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.genderData.Location = New System.Drawing.Point(125, 351)
         Me.genderData.Name = "genderData"
-        Me.genderData.Size = New System.Drawing.Size(34, 27)
+        Me.genderData.Size = New System.Drawing.Size(46, 27)
         Me.genderData.TabIndex = 10
-        Me.genderData.Text = "Null"
+        Me.genderData.Text = Global.StudentRecordSystem.My.Resources.Resources.nullLabel
         '
         'contactData
         '
@@ -176,19 +180,19 @@ Partial Class Modal
         Me.contactData.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.contactData.Location = New System.Drawing.Point(138, 384)
         Me.contactData.Name = "contactData"
-        Me.contactData.Size = New System.Drawing.Size(34, 27)
+        Me.contactData.Size = New System.Drawing.Size(46, 27)
         Me.contactData.TabIndex = 11
-        Me.contactData.Text = "Null"
+        Me.contactData.Text = Global.StudentRecordSystem.My.Resources.Resources.nullLabel
         '
-        'Guna2HtmlLabel1
+        'modalLabel
         '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(95, 22)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(205, 27)
-        Me.Guna2HtmlLabel1.TabIndex = 12
-        Me.Guna2HtmlLabel1.Text = "STUDENT INFORMATION"
+        Me.modalLabel.BackColor = System.Drawing.Color.Transparent
+        Me.modalLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.modalLabel.Location = New System.Drawing.Point(95, 21)
+        Me.modalLabel.Name = "modalLabel"
+        Me.modalLabel.Size = New System.Drawing.Size(205, 27)
+        Me.modalLabel.TabIndex = 12
+        Me.modalLabel.Text = My.Resources.modalWindowLabel
         '
         'addStudentImage
         '
@@ -200,7 +204,7 @@ Partial Class Modal
         Me.addStudentImage.ImageOffset = New System.Drawing.Point(0, 0)
         Me.addStudentImage.ImageRotate = 0!
         Me.addStudentImage.ImageSize = New System.Drawing.Size(24, 24)
-        Me.addStudentImage.Location = New System.Drawing.Point(179, 124)
+        Me.addStudentImage.Location = New System.Drawing.Point(164, 124)
         Me.addStudentImage.Name = "addStudentImage"
         Me.addStudentImage.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
         Me.addStudentImage.PressedState.ImageSize = New System.Drawing.Size(24, 24)
@@ -214,7 +218,7 @@ Partial Class Modal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(416, 488)
         Me.Controls.Add(Me.addStudentImage)
-        Me.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Controls.Add(Me.modalLabel)
         Me.Controls.Add(Me.contactData)
         Me.Controls.Add(Me.genderData)
         Me.Controls.Add(Me.courseData)
@@ -254,6 +258,6 @@ Partial Class Modal
     Friend WithEvents courseData As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents nameData As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents studentNoData As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents modalLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents addStudentImage As Guna.UI2.WinForms.Guna2ImageButton
 End Class

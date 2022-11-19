@@ -22,14 +22,129 @@ StudentRecordSystem
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.addStudentBtnLabel">
+<summary>
+  Looks up a localized string similar to Add Student.
+</summary>
+</member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.appName">
 <summary>
   Looks up a localized string similar to STUDENTS RECORD SYSTEM.
 </summary>
 </member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.baseCDirectory">
+<summary>
+  Looks up a localized string similar to C:\.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.baseDDirectory">
+<summary>
+  Looks up a localized string similar to D:\.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.basePath">
+<summary>
+  Looks up a localized string similar to D:\StudentsProfile\.
+</summary>
+</member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.close">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.contactLabel">
+<summary>
+  Looks up a localized string similar to CONTACT:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.copy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.copyErrorText">
+<summary>
+  Looks up a localized string similar to Error when copying the image please try again..
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.courseLabel">
+<summary>
+  Looks up a localized string similar to COURSE:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.departmentIdColumn">
+<summary>
+  Looks up a localized string similar to id.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.departmentLabel">
+<summary>
+  Looks up a localized string similar to DEPARTMENT:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.departmentNameColumn">
+<summary>
+  Looks up a localized string similar to department_name.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.emptyFieldsErrorText">
+<summary>
+  Looks up a localized string similar to Please fill the empty fields.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.errorCaption">
+<summary>
+  Looks up a localized string similar to Error!.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.femaleInitial">
+<summary>
+  Looks up a localized string similar to F.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.femaleText">
+<summary>
+  Looks up a localized string similar to Female.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.fileDialogTitle">
+<summary>
+  Looks up a localized string similar to Add Image.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.fileTypeFilter">
+<summary>
+  Looks up a localized string similar to *.png|*.jpg.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.genderLabel">
+<summary>
+  Looks up a localized string similar to GENDER:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.homeDirectory">
+<summary>
+  Looks up a localized string similar to D:\StudentsProfile.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.invalidCaption">
+<summary>
+  Looks up a localized string similar to Invalid!.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.jpgType">
+<summary>
+  Looks up a localized string similar to .jpg.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.maleInitial">
+<summary>
+  Looks up a localized string similar to M.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.maleText">
+<summary>
+  Looks up a localized string similar to Male.
 </summary>
 </member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.maximize">
@@ -42,9 +157,89 @@ StudentRecordSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.modalWindowLabel">
+<summary>
+  Looks up a localized string similar to STUDENT INFORMATION.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.nameLabel">
+<summary>
+  Looks up a localized string similar to NAME:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.nullLabel">
+<summary>
+  Looks up a localized string similar to NULL.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.okButtonLabel">
+<summary>
+  Looks up a localized string similar to OK.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.pngType">
+<summary>
+  Looks up a localized string similar to .png.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.profileCaption">
+<summary>
+  Looks up a localized string similar to Profile is missing!.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.profileIdColumn">
+<summary>
+  Looks up a localized string similar to id.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.profileImagePathColumn">
+<summary>
+  Looks up a localized string similar to image_path.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.provideProfileErrorText">
+<summary>
+  Looks up a localized string similar to Please provide a profile picture..
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.savingImageErrorText">
+<summary>
+  Looks up a localized string similar to An error occured when saving the image.
+</summary>
+</member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.search">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.searchHint">
+<summary>
+  Looks up a localized string similar to Search.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.studentNoLabel">
+<summary>
+  Looks up a localized string similar to STUDENT NO:.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.studentRecordWindowLabel">
+<summary>
+  Looks up a localized string similar to STUDENTS RECORDS.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.successCaption">
+<summary>
+  Looks up a localized string similar to Success!.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.successStudentText">
+<summary>
+  Looks up a localized string similar to Student has been updated!.
+</summary>
+</member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.unknownErrrorText">
+<summary>
+  Looks up a localized string similar to An error occured please try again..
 </summary>
 </member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.upload">
@@ -122,17 +317,19 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="M:StudentRecordSystem.MainWindow.SaveProfile(System.String)">
+ <summary>
+ (Create and) Copies the file to D:\StudentsProfile directory
+ </summary>
+ <param name="filePath">Path of the file selected from file dialog</param>
+ <returns> String that holds the random file name </returns>
+</member>
 <member name="T:StudentRecordSystem.srsdbDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 <member name="T:StudentRecordSystem.srsdbDataSet.students_tblDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:StudentRecordSystem.srsdbDataSet.profiles_tblDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -147,11 +344,6 @@ Represents the strongly named DataTable class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:StudentRecordSystem.srsdbDataSet.profiles_tblRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
 <member name="T:StudentRecordSystem.srsdbDataSet.departments_tblRow">
 <summary>
 Represents strongly named DataRow class.
@@ -162,22 +354,12 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
-<member name="T:StudentRecordSystem.srsdbDataSet.profiles_tblRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:StudentRecordSystem.srsdbDataSet.departments_tblRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
 <member name="T:StudentRecordSystem.srsdbDataSetTableAdapters.students_tblTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:StudentRecordSystem.srsdbDataSetTableAdapters.profiles_tblTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

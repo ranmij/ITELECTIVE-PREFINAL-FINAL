@@ -22,19 +22,19 @@ Partial Class SplashScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.appName = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'appName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(50, 123)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(437, 47)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "STUDENTS REPORT SYSTEM"
+        Me.appName.AutoSize = True
+        Me.appName.BackColor = System.Drawing.Color.Transparent
+        Me.appName.Font = New System.Drawing.Font("Segoe UI Light", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.appName.Location = New System.Drawing.Point(50, 123)
+        Me.appName.Name = "appName"
+        Me.appName.Size = New System.Drawing.Size(445, 47)
+        Me.appName.TabIndex = 0
+        Me.appName.Text = "STUDENTS RECORD SYSTEM"
         '
         'SplashScreen
         '
@@ -43,7 +43,7 @@ Partial Class SplashScreen
         Me.BackgroundImage = Global.StudentRecordSystem.My.Resources.Resources.wave
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(531, 317)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.appName)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -54,5 +54,5 @@ Partial Class SplashScreen
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents appName As Label
 End Class

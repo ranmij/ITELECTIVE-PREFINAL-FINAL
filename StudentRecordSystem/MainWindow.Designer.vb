@@ -23,22 +23,15 @@ Partial Class MainWindow
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
         Me.MainWindowStyle = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.windowLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.studentsRecordView = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.departmentComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.departmentLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.maximizeBtn = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.searchTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.minimizeBtn = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.exitBtn = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,10 +43,18 @@ Partial Class MainWindow
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StudentstblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SrsdbDataSet = New StudentRecordSystem.srsdbDataSet()
-        Me.Students_tblTableAdapter = New StudentRecordSystem.srsdbDataSetTableAdapters.students_tblTableAdapter()
+        Me.departmentComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.departmentLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.maximizeBtn = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.searchTextBox = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.minimizeBtn = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.exitBtn = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.ProfilesDataSet = New StudentRecordSystem.ProfilesDataSet()
         Me.ProfilestblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Profiles_tblTableAdapter = New StudentRecordSystem.ProfilesDataSetTableAdapters.profiles_tblTableAdapter()
+        Me.addStudentBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.Students_tblTableAdapter = New StudentRecordSystem.srsdbDataSetTableAdapters.students_tblTableAdapter()
         CType(Me.studentsRecordView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentstblBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SrsdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,69 +74,70 @@ Partial Class MainWindow
         Me.windowLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.windowLabel.BackColor = System.Drawing.Color.Transparent
         Me.windowLabel.Font = New System.Drawing.Font("Segoe UI Light", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.windowLabel.Location = New System.Drawing.Point(280, 71)
+        Me.windowLabel.Location = New System.Drawing.Point(280, 54)
         Me.windowLabel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.windowLabel.Name = "windowLabel"
         Me.windowLabel.Size = New System.Drawing.Size(245, 39)
         Me.windowLabel.TabIndex = 0
-        Me.windowLabel.Text = "STUDENTS RECORDS"
+        Me.windowLabel.Text = My.Resources.studentRecordWindowLabel
         '
         'studentsRecordView
         '
         Me.studentsRecordView.AllowUserToAddRows = False
         Me.studentsRecordView.AllowUserToDeleteRows = False
         Me.studentsRecordView.AllowUserToResizeRows = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        Me.studentsRecordView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        Me.studentsRecordView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.studentsRecordView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.studentsRecordView.AutoGenerateColumns = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.studentsRecordView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.studentsRecordView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.studentsRecordView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.studentsRecordView.ColumnHeadersHeight = 29
         Me.studentsRecordView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.studentsRecordView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.studentsRecordView.DataSource = Me.StudentstblBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.studentsRecordView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.studentsRecordView.DefaultCellStyle = DataGridViewCellStyle3
         Me.studentsRecordView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.studentsRecordView.Location = New System.Drawing.Point(37, 216)
         Me.studentsRecordView.Name = "studentsRecordView"
         Me.studentsRecordView.ReadOnly = True
         Me.studentsRecordView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.studentsRecordView.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.studentsRecordView.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.studentsRecordView.RowHeadersVisible = False
         Me.studentsRecordView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        Me.studentsRecordView.RowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.studentsRecordView.Size = New System.Drawing.Size(722, 264)
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        Me.studentsRecordView.RowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.studentsRecordView.Size = New System.Drawing.Size(722, 277)
         Me.studentsRecordView.TabIndex = 1
         Me.studentsRecordView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.studentsRecordView.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -158,118 +160,6 @@ Partial Class MainWindow
         Me.studentsRecordView.ThemeStyle.RowsStyle.Height = 22
         Me.studentsRecordView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.studentsRecordView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'departmentComboBox
-        '
-        Me.departmentComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.departmentComboBox.BackColor = System.Drawing.Color.Transparent
-        Me.departmentComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.departmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.departmentComboBox.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.departmentComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.departmentComboBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.departmentComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.departmentComboBox.ItemHeight = 30
-        Me.departmentComboBox.Location = New System.Drawing.Point(178, 154)
-        Me.departmentComboBox.Name = "departmentComboBox"
-        Me.departmentComboBox.Size = New System.Drawing.Size(181, 36)
-        Me.departmentComboBox.TabIndex = 2
-        '
-        'departmentLabel
-        '
-        Me.departmentLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.departmentLabel.BackColor = System.Drawing.Color.Transparent
-        Me.departmentLabel.Font = New System.Drawing.Font("Segoe UI Light", 18.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.departmentLabel.Location = New System.Drawing.Point(37, 153)
-        Me.departmentLabel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.departmentLabel.Name = "departmentLabel"
-        Me.departmentLabel.Size = New System.Drawing.Size(134, 37)
-        Me.departmentLabel.TabIndex = 3
-        Me.departmentLabel.Text = "Department:"
-        '
-        'maximizeBtn
-        '
-        Me.maximizeBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.maximizeBtn.BackColor = System.Drawing.Color.Transparent
-        Me.maximizeBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.maximizeBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.maximize
-        Me.maximizeBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.maximizeBtn.Image = CType(resources.GetObject("maximizeBtn.Image"), System.Drawing.Image)
-        Me.maximizeBtn.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.maximizeBtn.ImageRotate = 0!
-        Me.maximizeBtn.ImageSize = New System.Drawing.Size(16, 16)
-        Me.maximizeBtn.Location = New System.Drawing.Point(730, 0)
-        Me.maximizeBtn.Name = "maximizeBtn"
-        Me.maximizeBtn.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        Me.maximizeBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.maximizeBtn.Size = New System.Drawing.Size(29, 23)
-        Me.maximizeBtn.TabIndex = 5
-        Me.maximizeBtn.UseTransparentBackground = True
-        '
-        'searchTextBox
-        '
-        Me.searchTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.searchTextBox.AutoRoundedCorners = True
-        Me.searchTextBox.BorderRadius = 17
-        Me.searchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.searchTextBox.DefaultText = ""
-        Me.searchTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.searchTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.searchTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.searchTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.searchTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.searchTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.searchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.searchTextBox.IconRight = Global.StudentRecordSystem.My.Resources.Resources.search
-        Me.searchTextBox.IconRightSize = New System.Drawing.Size(16, 16)
-        Me.searchTextBox.Location = New System.Drawing.Point(461, 153)
-        Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.searchTextBox.PlaceholderText = "Search"
-        Me.searchTextBox.SelectedText = ""
-        Me.searchTextBox.Size = New System.Drawing.Size(298, 36)
-        Me.searchTextBox.TabIndex = 4
-        '
-        'minimizeBtn
-        '
-        Me.minimizeBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.minimizeBtn.BackColor = System.Drawing.Color.Transparent
-        Me.minimizeBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.minimizeBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
-        Me.minimizeBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.minimizeBtn.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
-        Me.minimizeBtn.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.minimizeBtn.ImageRotate = 0!
-        Me.minimizeBtn.ImageSize = New System.Drawing.Size(16, 16)
-        Me.minimizeBtn.Location = New System.Drawing.Point(686, 0)
-        Me.minimizeBtn.Name = "minimizeBtn"
-        Me.minimizeBtn.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
-        Me.minimizeBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.minimizeBtn.Size = New System.Drawing.Size(29, 23)
-        Me.minimizeBtn.TabIndex = 6
-        Me.minimizeBtn.UseTransparentBackground = True
-        '
-        'exitBtn
-        '
-        Me.exitBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.exitBtn.BackColor = System.Drawing.Color.Transparent
-        Me.exitBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.exitBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
-        Me.exitBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.exitBtn.Image = Global.StudentRecordSystem.My.Resources.Resources.close
-        Me.exitBtn.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.exitBtn.ImageRotate = 0!
-        Me.exitBtn.ImageSize = New System.Drawing.Size(16, 16)
-        Me.exitBtn.Location = New System.Drawing.Point(768, 0)
-        Me.exitBtn.Name = "exitBtn"
-        Me.exitBtn.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
-        Me.exitBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
-        Me.exitBtn.Size = New System.Drawing.Size(29, 23)
-        Me.exitBtn.TabIndex = 7
-        Me.exitBtn.UseTransparentBackground = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -347,9 +237,119 @@ Partial Class MainWindow
         Me.SrsdbDataSet.DataSetName = "srsdbDataSet"
         Me.SrsdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Students_tblTableAdapter
+        'departmentComboBox
         '
-        Me.Students_tblTableAdapter.ClearBeforeFill = True
+        Me.departmentComboBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.departmentComboBox.BackColor = System.Drawing.Color.Transparent
+        Me.departmentComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.departmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.departmentComboBox.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.departmentComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.departmentComboBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.departmentComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.departmentComboBox.ItemHeight = 30
+        Me.departmentComboBox.Location = New System.Drawing.Point(190, 126)
+        Me.departmentComboBox.Name = "departmentComboBox"
+        Me.departmentComboBox.Size = New System.Drawing.Size(181, 36)
+        Me.departmentComboBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.departmentComboBox.TabIndex = 2
+        '
+        'departmentLabel
+        '
+        Me.departmentLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.departmentLabel.BackColor = System.Drawing.Color.Transparent
+        Me.departmentLabel.Font = New System.Drawing.Font("Segoe UI Light", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.departmentLabel.Location = New System.Drawing.Point(37, 126)
+        Me.departmentLabel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.departmentLabel.Name = "departmentLabel"
+        Me.departmentLabel.Size = New System.Drawing.Size(146, 33)
+        Me.departmentLabel.TabIndex = 3
+        Me.departmentLabel.Text = My.Resources.departmentLabel
+        '
+        'maximizeBtn
+        '
+        Me.maximizeBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.maximizeBtn.BackColor = System.Drawing.Color.Transparent
+        Me.maximizeBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.maximizeBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.maximize
+        Me.maximizeBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.maximizeBtn.Image = CType(resources.GetObject("maximizeBtn.Image"), System.Drawing.Image)
+        Me.maximizeBtn.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.maximizeBtn.ImageRotate = 0!
+        Me.maximizeBtn.ImageSize = New System.Drawing.Size(16, 16)
+        Me.maximizeBtn.Location = New System.Drawing.Point(710, 0)
+        Me.maximizeBtn.Name = "maximizeBtn"
+        Me.maximizeBtn.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        Me.maximizeBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.maximizeBtn.Size = New System.Drawing.Size(41, 33)
+        Me.maximizeBtn.TabIndex = 5
+        Me.maximizeBtn.UseTransparentBackground = True
+        '
+        'searchTextBox
+        '
+        Me.searchTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchTextBox.AutoRoundedCorners = True
+        Me.searchTextBox.BorderRadius = 17
+        Me.searchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.searchTextBox.DefaultText = ""
+        Me.searchTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.searchTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.searchTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.searchTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.searchTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.searchTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.searchTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.searchTextBox.IconRight = Global.StudentRecordSystem.My.Resources.Resources.search
+        Me.searchTextBox.IconRightSize = New System.Drawing.Size(16, 16)
+        Me.searchTextBox.Location = New System.Drawing.Point(461, 122)
+        Me.searchTextBox.Name = "searchTextBox"
+        Me.searchTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.searchTextBox.PlaceholderText = My.Resources.searchHint
+        Me.searchTextBox.SelectedText = ""
+        Me.searchTextBox.Size = New System.Drawing.Size(298, 36)
+        Me.searchTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
+        Me.searchTextBox.TabIndex = 4
+        '
+        'minimizeBtn
+        '
+        Me.minimizeBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.minimizeBtn.BackColor = System.Drawing.Color.Transparent
+        Me.minimizeBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.minimizeBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
+        Me.minimizeBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.minimizeBtn.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
+        Me.minimizeBtn.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.minimizeBtn.ImageRotate = 0!
+        Me.minimizeBtn.ImageSize = New System.Drawing.Size(16, 16)
+        Me.minimizeBtn.Location = New System.Drawing.Point(663, 0)
+        Me.minimizeBtn.Name = "minimizeBtn"
+        Me.minimizeBtn.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.minus
+        Me.minimizeBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.minimizeBtn.Size = New System.Drawing.Size(41, 33)
+        Me.minimizeBtn.TabIndex = 6
+        Me.minimizeBtn.UseTransparentBackground = True
+        '
+        'exitBtn
+        '
+        Me.exitBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.exitBtn.BackColor = System.Drawing.Color.Transparent
+        Me.exitBtn.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.exitBtn.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
+        Me.exitBtn.HoverState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.exitBtn.Image = Global.StudentRecordSystem.My.Resources.Resources.close
+        Me.exitBtn.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.exitBtn.ImageRotate = 0!
+        Me.exitBtn.ImageSize = New System.Drawing.Size(16, 16)
+        Me.exitBtn.Location = New System.Drawing.Point(757, 0)
+        Me.exitBtn.Name = "exitBtn"
+        Me.exitBtn.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
+        Me.exitBtn.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.exitBtn.Size = New System.Drawing.Size(41, 33)
+        Me.exitBtn.TabIndex = 7
+        Me.exitBtn.UseTransparentBackground = True
         '
         'ProfilesDataSet
         '
@@ -365,12 +365,40 @@ Partial Class MainWindow
         '
         Me.Profiles_tblTableAdapter.ClearBeforeFill = True
         '
+        'addStudentBtn
+        '
+        Me.addStudentBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.addStudentBtn.AutoRoundedCorners = True
+        Me.addStudentBtn.BackColor = System.Drawing.Color.Transparent
+        Me.addStudentBtn.BorderRadius = 17
+        Me.addStudentBtn.BorderThickness = 1
+        Me.addStudentBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.addStudentBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.addStudentBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.addStudentBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.addStudentBtn.FillColor = System.Drawing.Color.Transparent
+        Me.addStudentBtn.FocusedColor = System.Drawing.Color.Transparent
+        Me.addStudentBtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.addStudentBtn.ForeColor = System.Drawing.Color.Black
+        Me.addStudentBtn.HoverState.FillColor = System.Drawing.Color.Black
+        Me.addStudentBtn.HoverState.ForeColor = System.Drawing.Color.White
+        Me.addStudentBtn.Location = New System.Drawing.Point(619, 171)
+        Me.addStudentBtn.Name = "addStudentBtn"
+        Me.addStudentBtn.Size = New System.Drawing.Size(140, 36)
+        Me.addStudentBtn.TabIndex = 8
+        Me.addStudentBtn.Text = My.Resources.addStudentBtnLabel
+        '
+        'Students_tblTableAdapter
+        '
+        Me.Students_tblTableAdapter.ClearBeforeFill = True
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(800, 522)
+        Me.Controls.Add(Me.addStudentBtn)
         Me.Controls.Add(Me.exitBtn)
         Me.Controls.Add(Me.minimizeBtn)
         Me.Controls.Add(Me.maximizeBtn)
@@ -430,4 +458,5 @@ Partial Class MainWindow
     Friend WithEvents ProfilesDataSet As ProfilesDataSet
     Friend WithEvents ProfilestblBindingSource As BindingSource
     Friend WithEvents Profiles_tblTableAdapter As ProfilesDataSetTableAdapters.profiles_tblTableAdapter
+    Friend WithEvents addStudentBtn As Guna.UI2.WinForms.Guna2Button
 End Class
