@@ -44,6 +44,8 @@ Partial Class MainWindow
         Me.StudentstblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SrsdbDataSet = New StudentRecordSystem.srsdbDataSet()
         Me.departmentComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.DepartmentstblBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DepartmentDataSet = New StudentRecordSystem.DepartmentDataSet()
         Me.departmentLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.maximizeBtn = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.searchTextBox = New Guna.UI2.WinForms.Guna2TextBox()
@@ -55,9 +57,12 @@ Partial Class MainWindow
         Me.Profiles_tblTableAdapter = New StudentRecordSystem.ProfilesDataSetTableAdapters.profiles_tblTableAdapter()
         Me.addStudentBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Students_tblTableAdapter = New StudentRecordSystem.srsdbDataSetTableAdapters.students_tblTableAdapter()
+        Me.Departments_tblTableAdapter = New StudentRecordSystem.DepartmentDataSetTableAdapters.departments_tblTableAdapter()
         CType(Me.studentsRecordView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentstblBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SrsdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DepartmentstblBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DepartmentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProfilesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProfilestblBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,7 +84,7 @@ Partial Class MainWindow
         Me.windowLabel.Name = "windowLabel"
         Me.windowLabel.Size = New System.Drawing.Size(245, 39)
         Me.windowLabel.TabIndex = 0
-        Me.windowLabel.Text = My.Resources.studentRecordWindowLabel
+        Me.windowLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.studentRecordWindowLabel
         '
         'studentsRecordView
         '
@@ -102,12 +107,11 @@ Partial Class MainWindow
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.studentsRecordView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.studentsRecordView.ColumnHeadersHeight = 29
-        Me.studentsRecordView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.studentsRecordView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.studentsRecordView.DataSource = Me.StudentstblBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -150,7 +154,7 @@ Partial Class MainWindow
         Me.studentsRecordView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.studentsRecordView.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.studentsRecordView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.studentsRecordView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.studentsRecordView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.studentsRecordView.ThemeStyle.HeaderStyle.Height = 29
         Me.studentsRecordView.ThemeStyle.ReadOnly = True
         Me.studentsRecordView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
@@ -255,6 +259,16 @@ Partial Class MainWindow
         Me.departmentComboBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.departmentComboBox.TabIndex = 2
         '
+        'DepartmentstblBindingSource
+        '
+        Me.DepartmentstblBindingSource.DataMember = "departments_tbl"
+        Me.DepartmentstblBindingSource.DataSource = Me.DepartmentDataSet
+        '
+        'DepartmentDataSet
+        '
+        Me.DepartmentDataSet.DataSetName = "DepartmentDataSet"
+        Me.DepartmentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'departmentLabel
         '
         Me.departmentLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -267,7 +281,7 @@ Partial Class MainWindow
         Me.departmentLabel.Name = "departmentLabel"
         Me.departmentLabel.Size = New System.Drawing.Size(146, 33)
         Me.departmentLabel.TabIndex = 3
-        Me.departmentLabel.Text = My.Resources.departmentLabel
+        Me.departmentLabel.Text = Global.StudentRecordSystem.My.Resources.Resources.departmentLabel
         '
         'maximizeBtn
         '
@@ -307,7 +321,7 @@ Partial Class MainWindow
         Me.searchTextBox.Location = New System.Drawing.Point(461, 122)
         Me.searchTextBox.Name = "searchTextBox"
         Me.searchTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.searchTextBox.PlaceholderText = My.Resources.searchHint
+        Me.searchTextBox.PlaceholderText = Global.StudentRecordSystem.My.Resources.Resources.searchHint
         Me.searchTextBox.SelectedText = ""
         Me.searchTextBox.Size = New System.Drawing.Size(298, 36)
         Me.searchTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
@@ -386,11 +400,15 @@ Partial Class MainWindow
         Me.addStudentBtn.Name = "addStudentBtn"
         Me.addStudentBtn.Size = New System.Drawing.Size(140, 36)
         Me.addStudentBtn.TabIndex = 8
-        Me.addStudentBtn.Text = My.Resources.addStudentBtnLabel
+        Me.addStudentBtn.Text = "Add Student"
         '
         'Students_tblTableAdapter
         '
         Me.Students_tblTableAdapter.ClearBeforeFill = True
+        '
+        'Departments_tblTableAdapter
+        '
+        Me.Departments_tblTableAdapter.ClearBeforeFill = True
         '
         'MainWindow
         '
@@ -417,6 +435,8 @@ Partial Class MainWindow
         CType(Me.studentsRecordView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentstblBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SrsdbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DepartmentstblBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DepartmentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProfilesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProfilestblBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -459,4 +479,7 @@ Partial Class MainWindow
     Friend WithEvents ProfilestblBindingSource As BindingSource
     Friend WithEvents Profiles_tblTableAdapter As ProfilesDataSetTableAdapters.profiles_tblTableAdapter
     Friend WithEvents addStudentBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents DepartmentDataSet As DepartmentDataSet
+    Friend WithEvents DepartmentstblBindingSource As BindingSource
+    Friend WithEvents Departments_tblTableAdapter As DepartmentDataSetTableAdapters.departments_tblTableAdapter
 End Class

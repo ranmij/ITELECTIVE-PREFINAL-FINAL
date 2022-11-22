@@ -142,6 +142,7 @@ Partial Class StudentForm
         Me.studentNoTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.studentNoTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.studentNoTextBox.Location = New System.Drawing.Point(196, 197)
+        Me.studentNoTextBox.MaxLength = 6
         Me.studentNoTextBox.Name = "studentNoTextBox"
         Me.studentNoTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.studentNoTextBox.PlaceholderText = ""
@@ -202,6 +203,7 @@ Partial Class StudentForm
         Me.courseTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.courseTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.courseTextBox.Location = New System.Drawing.Point(196, 302)
+        Me.courseTextBox.MaxLength = 50
         Me.courseTextBox.Name = "courseTextBox"
         Me.courseTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.courseTextBox.PlaceholderText = ""
@@ -215,9 +217,9 @@ Partial Class StudentForm
         Me.studentProfilePicture.BorderRadius = 2
         Me.studentProfilePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.studentProfilePicture.ImageRotate = 0!
-        Me.studentProfilePicture.Location = New System.Drawing.Point(152, 26)
+        Me.studentProfilePicture.Location = New System.Drawing.Point(169, 31)
         Me.studentProfilePicture.Name = "studentProfilePicture"
-        Me.studentProfilePicture.Size = New System.Drawing.Size(204, 149)
+        Me.studentProfilePicture.Size = New System.Drawing.Size(184, 149)
         Me.studentProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.studentProfilePicture.TabIndex = 13
         Me.studentProfilePicture.TabStop = False
@@ -232,7 +234,7 @@ Partial Class StudentForm
         Me.addImage.ImageOffset = New System.Drawing.Point(0, 0)
         Me.addImage.ImageRotate = 0!
         Me.addImage.ImageSize = New System.Drawing.Size(24, 24)
-        Me.addImage.Location = New System.Drawing.Point(224, 74)
+        Me.addImage.Location = New System.Drawing.Point(232, 78)
         Me.addImage.Name = "addImage"
         Me.addImage.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
         Me.addImage.PressedState.ImageSize = New System.Drawing.Size(24, 24)
@@ -257,11 +259,12 @@ Partial Class StudentForm
         Me.addStudentBtn.HoverState.FillColor = System.Drawing.Color.Black
         Me.addStudentBtn.HoverState.FillColor2 = System.Drawing.Color.Black
         Me.addStudentBtn.HoverState.ForeColor = System.Drawing.Color.White
-        Me.addStudentBtn.Location = New System.Drawing.Point(317, 463)
+        Me.addStudentBtn.Location = New System.Drawing.Point(358, 463)
         Me.addStudentBtn.Name = "addStudentBtn"
         Me.addStudentBtn.Size = New System.Drawing.Size(137, 33)
         Me.addStudentBtn.TabIndex = 16
         Me.addStudentBtn.Text = "Add Student"
+        Me.addStudentBtn.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase
         '
         'departmentComboBox
         '
@@ -289,7 +292,7 @@ Partial Class StudentForm
         Me.closeStudentForm.ImageOffset = New System.Drawing.Point(0, 0)
         Me.closeStudentForm.ImageRotate = 0!
         Me.closeStudentForm.ImageSize = New System.Drawing.Size(16, 16)
-        Me.closeStudentForm.Location = New System.Drawing.Point(474, 0)
+        Me.closeStudentForm.Location = New System.Drawing.Point(473, 1)
         Me.closeStudentForm.Name = "closeStudentForm"
         Me.closeStudentForm.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
         Me.closeStudentForm.PressedState.ImageSize = New System.Drawing.Size(16, 16)
@@ -356,6 +359,7 @@ Partial Class StudentForm
         Me.phoneNumberTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.phoneNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.phoneNumberTextBox.Location = New System.Drawing.Point(196, 337)
+        Me.phoneNumberTextBox.MaxLength = 20
         Me.phoneNumberTextBox.Name = "phoneNumberTextBox"
         Me.phoneNumberTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.phoneNumberTextBox.PlaceholderText = ""

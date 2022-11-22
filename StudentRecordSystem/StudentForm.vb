@@ -2,10 +2,9 @@
 Imports System.IO
 
 Public Class StudentForm
-    Private connection As New SqlConnection(My.Settings.srsdbConnectionString)
     Private filePath As String = Nothing
     Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        departmentComboBox.DataSource = MainWindow.SrsdbDataSet.Tables(1)
+        departmentComboBox.DataSource = MainWindow.DepartmentDataSet.departments_tbl
         departmentComboBox.DisplayMember = My.Resources.departmentNameColumn
         departmentComboBox.ValueMember = My.Resources.departmentIdColumn
     End Sub
@@ -39,33 +38,25 @@ Public Class StudentForm
         Dim gender = If(maleRadioBtn.Checked, My.Resources.maleInitial, If(femaleRadioBtn.Checked, My.Resources.femaleInitial, Nothing))
         If sender.Equals(addStudentBtn) Then
             If filePath <> Nothing Then
+                ' Check if all the fields are not empty.
                 If textBoxes.All(Function(textBox) Not String.IsNullOrEmpty(textBox.Text)) AndAlso gender <> Nothing AndAlso String.IsNullOrEmpty(departmentComboBox.SelectedText) Then
-                    connection.Open()
-                    Using pcmd As New SqlCommand($"INSERT INTO profiles_tbl VALUES ('{filePath}')", connection)
-                        If pcmd.ExecuteNonQuery() <> 0 Then
-                            pcmd.Dispose()
-                            Using cmd As New SqlCommand("INSERT INTO students_tbl (student_no, first_name, last_name, course, gender, phone, department_id, profile_id) VALUES " &
-                            $"('{studentNoTextBox.Text}', '{firstNameTextBox.Text}', '{lastNameTextBox.Text}', '{courseTextBox.Text}', '{gender}', '{phoneNumberTextBox.Text}', {departmentComboBox.SelectedValue}, (SELECT id FROM profiles_tbl WHERE image_path = '{filePath}'))", connection)
-                                If cmd.ExecuteNonQuery() <> 0 Then
-                                    onSuccess.Caption = My.Resources.successCaption
-                                    onSuccess.Text = My.Resources.successStudentText
-                                    onSuccess.Show()
-                                    MainWindow.Students_tblTableAdapter.Fill(MainWindow.SrsdbDataSet.students_tbl)
-                                    MainWindow.studentsRecordView.Rows(0).Selected = False
-                                    MainWindow.Profiles_tblTableAdapter.Fill(MainWindow.ProfilesDataSet.profiles_tbl)
-                                    Me.Close()
-                                Else
-                                    onError.Caption = My.Resources.errorCaption
-                                    onError.Text = My.Resources.unknownErrrorText
-                                    onError.Show()
-                                End If
-                            End Using
-                        Else
-                            onError.Caption = My.Resources.errorCaption
-                            onError.Text = My.Resources.savingImageErrorText
-                            onError.Show()
+                    ' Inserts profile and student's information
+                    If MainWindow.Profiles_tblTableAdapter.insertImage(filePath) <> 0 Then
+                        If MainWindow.Students_tblTableAdapter.InsertStudentQuery(student_no:=studentNoTextBox.Text, first_name:=firstNameTextBox.Text, last_name:=lastNameTextBox.Text,
+                                                       course:=courseTextBox.Text, gender:=gender, phone:=phoneNumberTextBox.Text, department_id:=Convert.ToInt32(departmentComboBox.SelectedValue), fileDir:=filePath) <> 0 Then
+                            onSuccess.Caption = My.Resources.successCaption
+                            onSuccess.Text = My.Resources.successStudentText
+                            onSuccess.Show()
+                            MainWindow.Students_tblTableAdapter.Fill(MainWindow.SrsdbDataSet.students_tbl)
+                            MainWindow.studentsRecordView.Rows(0).Selected = False
+                            MainWindow.Profiles_tblTableAdapter.Fill(MainWindow.ProfilesDataSet.profiles_tbl)
+                            Me.Close()
                         End If
-                    End Using
+                    Else
+                        onError.Caption = My.Resources.errorCaption
+                        onError.Text = My.Resources.savingImageErrorText
+                        onError.Show()
+                    End If
                 Else
                     onError.Caption = My.Resources.invalidCaption
                     onError.Text = My.Resources.emptyFieldsErrorText

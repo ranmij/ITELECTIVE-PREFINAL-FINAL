@@ -92,6 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DepartmentDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modal.Designer.vb">
       <DependentUpon>Modal.vb</DependentUpon>
     </Compile>
@@ -165,6 +170,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DepartmentDataSet.xsc">
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DepartmentDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DepartmentDataSet.xss">
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

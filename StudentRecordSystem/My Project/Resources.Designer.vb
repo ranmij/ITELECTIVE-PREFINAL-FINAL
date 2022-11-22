@@ -335,15 +335,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to OK.
-        '''</summary>
-        Friend ReadOnly Property okButtonLabel() As String
-            Get
-                Return ResourceManager.GetString("okButtonLabel", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to .png.
         '''</summary>
         Friend ReadOnly Property pngType() As String
@@ -458,6 +449,15 @@ Namespace My.Resources
         Friend ReadOnly Property unknownErrrorText() As String
             Get
                 Return ResourceManager.GetString("unknownErrrorText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Update.
+        '''</summary>
+        Friend ReadOnly Property updateButtonLabel() As String
+            Get
+                Return ResourceManager.GetString("updateButtonLabel", resourceCulture)
             End Get
         End Property
         

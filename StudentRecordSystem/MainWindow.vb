@@ -1,18 +1,18 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Text
 Imports System.IO
-Imports StudentRecordSystem.srsdbDataSetTableAdapters
+Imports System.Windows.Forms.VisualStyles
 
 Public Class MainWindow
-    Private connection As New SqlConnection(My.Settings.srsdbConnectionString)  ' Universal connection, even your mom can connect to it :>
-    Private DepartmentAdapter As New departments_tblTableAdapter
     Private Sub MainWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Profiles_tblTableAdapter.Fill(Me.ProfilesDataSet.profiles_tbl)   ' Fill the profile data table
-        Me.Students_tblTableAdapter.Fill(Me.SrsdbDataSet.students_tbl)      ' Fill the students data table
-        DepartmentAdapter.Fill(Me.SrsdbDataSet.departments_tbl)             ' Fill the department data table
+        Me.Departments_tblTableAdapter.Fill(Me.DepartmentDataSet.departments_tbl)   ' Fill the profile data table
+        Me.Profiles_tblTableAdapter.Fill(Me.ProfilesDataSet.profiles_tbl)           ' Fill the profile data table
+        Me.Students_tblTableAdapter.Fill(Me.SrsdbDataSet.students_tbl)              ' Fill the students data table
 
         ' Bind the department data table to the department combo box
-        departmentComboBox.DataSource = Me.SrsdbDataSet.Tables(1)
+        departmentComboBox.DataSource = Me.DepartmentDataSet.departments_tbl
         departmentComboBox.DisplayMember = My.Resources.departmentNameColumn
+        departmentComboBox.ValueMember = My.Resources.departmentIdColumn
     End Sub
 #Region "CustomFunctions"
     ''' <summary>
@@ -74,6 +74,11 @@ Public Class MainWindow
     End Sub
     Private Sub studentsRecordView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles studentsRecordView.CellClick
         Dim modal As New Modal
+        If Me.WindowState = FormWindowState.Maximized Then
+            modal.Size = New Drawing.Size(Me.Width / 3, Me.Height - 350)
+        Else
+            modal.Size = New Drawing.Size(Me.Width - 400, Me.Height - 10)
+        End If
         Try
             With studentsRecordView.CurrentRow.Cells
                 modal.studentNoData.Text = .Item(1).Value                                                                                        ' Student Number
@@ -97,6 +102,19 @@ Public Class MainWindow
         Catch ex As Exception
             modal.Dispose()
         End Try
+    End Sub
+
+    Private Sub searchTextBox_IconRightClick(sender As Object, e As EventArgs) Handles searchTextBox.IconRightClick
+        Dim query As String = searchTextBox.Text
+        If Not String.IsNullOrEmpty(searchTextBox.Text) Then
+            Me.Students_tblTableAdapter.FillByQuery(Me.SrsdbDataSet.students_tbl, query)
+        Else
+            Me.Students_tblTableAdapter.Fill(Me.SrsdbDataSet.students_tbl)
+        End If
+
+    End Sub
+    Private Sub departmentComboBox_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles departmentComboBox.SelectionChangeCommitted
+        Me.Students_tblTableAdapter.FillByDepartmentId(Me.SrsdbDataSet.students_tbl, departmentComboBox.SelectedValue)
     End Sub
 #End Region
 End Class

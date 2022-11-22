@@ -2,9 +2,18 @@
 Imports System.IO
 
 Public Class Modal
-    Private connection As New SqlConnection(My.Settings.srsdbConnectionString)
-    Private Sub okBtn_Click(sender As Object, e As EventArgs) Handles okBtn.Click
-        Me.Close()
+    Private Sub Click_Events(sender As Object, e As EventArgs) Handles okBtn.Click, closeStudentForm.Click
+        If sender.Equals(okBtn) Then
+            ' Refresh the data table then set the current row again aaaaaaaand refresh profile datatable
+            Dim rowIndex As Integer = MainWindow.studentsRecordView.CurrentRow.Index
+            MainWindow.Students_tblTableAdapter.Fill(MainWindow.SrsdbDataSet.students_tbl)
+            MainWindow.studentsRecordView.Rows(0).Selected = False
+            MainWindow.studentsRecordView.Rows(rowIndex).Selected = True
+            MainWindow.Profiles_tblTableAdapter.Fill(MainWindow.ProfilesDataSet.profiles_tbl)
+        ElseIf sender.Equals(closeStudentForm) Then
+            Me.Close()
+        End If
+
     End Sub
 
     Public Sub AddImage(sender As Object, e As EventArgs) Handles addStudentImage.Click
@@ -19,28 +28,21 @@ Public Class Modal
         If fileDialog.ShowDialog() = DialogResult.OK Then
             fileName = MainWindow.SaveProfile(fileDialog.FileName)
             If fileName <> Nothing Then
-                connection.Open()
-                ' Inserts the profile the table
-                Using cmd As New SqlCommand($"INSERT INTO profiles_tbl VALUES ('{fileName}')", connection)
-                    If cmd.ExecuteNonQuery() <> 0 Then
-                        Dim id As Integer = MainWindow.studentsRecordView.CurrentRow.Cells.Item(0).Value
-                        ' Update the user's data
-                        Using ncmd As New SqlCommand($"UPDATE students_tbl SET profile_id = (SELECT id FROM profiles_tbl WHERE image_path = '{fileName}') WHERE id = {id}", connection)
-                            If ncmd.ExecuteNonQuery() <> 0 Then
-                                addStudentImage.Visible = False
-                                studentProfilePicture.Image = Image.FromFile(fileName)
-                            End If
-                        End Using
+                ' Inserts image to the table and update students.
+                If MainWindow.Profiles_tblTableAdapter.insertImage(fileName) <> 0 Then
+                    Dim id As Integer = MainWindow.studentsRecordView.CurrentRow.Cells.Item(0).Value
+                    If MainWindow.Students_tblTableAdapter.UpdateStudentQuery(id, fileName) <> 0 Then
+                        addStudentImage.Visible = False
+                        studentProfilePicture.Image = Image.FromFile(fileName)
                     End If
-                End Using
+                End If
             End If
         End If
 
-        ' Refresh the data table then set the current row again aaaaaaaand refresh profile datatable
-        Dim rowIndex As Integer = MainWindow.studentsRecordView.CurrentRow.Index
-        MainWindow.Students_tblTableAdapter.Fill(MainWindow.SrsdbDataSet.students_tbl)
-        MainWindow.studentsRecordView.Rows(0).Selected = False
-        MainWindow.studentsRecordView.Rows(rowIndex).Selected = True
-        MainWindow.Profiles_tblTableAdapter.Fill(MainWindow.ProfilesDataSet.profiles_tbl)
     End Sub
+
+    Private Sub closeStudentForm_Click(sender As Object, e As EventArgs) Handles closeStudentForm.Click
+        Me.Close()
+    End Sub
+
 End Class
