@@ -435,7 +435,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Student has been updated!.
+        '''  Looks up a localized string similar to Student has been delete successfully..
+        '''</summary>
+        Friend ReadOnly Property successDeleteText() As String
+            Get
+                Return ResourceManager.GetString("successDeleteText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Student has been updated successfully..
         '''</summary>
         Friend ReadOnly Property successStudentText() As String
             Get

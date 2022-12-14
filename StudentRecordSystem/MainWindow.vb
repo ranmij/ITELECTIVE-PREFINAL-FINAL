@@ -43,25 +43,9 @@ Public Class MainWindow
 
     ' These are all the click events.
 #Region "Click Events"
-    Private Sub OnHoverBtns(sender As Object, e As EventArgs) Handles exitBtn.Click, maximizeBtn.Click, minimizeBtn.Click, addStudentBtn.Click
+    Private Sub OnHoverBtns(sender As Object, e As EventArgs) Handles exitBtn.Click, addStudentBtn.Click
         If sender.Equals(exitBtn) Then
             Me.Close()
-        ElseIf sender.Equals(maximizeBtn) Then
-
-            If Me.WindowState = FormWindowState.Maximized Then
-                Me.WindowState = FormWindowState.Normal
-                maximizeBtn.Image = My.Resources.maximize
-                maximizeBtn.HoverState.Image = My.Resources.maximize
-                maximizeBtn.PressedState.Image = My.Resources.maximize
-                Me.Size = New Drawing.Size(800, 522)
-            Else
-                maximizeBtn.Image = My.Resources.copy
-                maximizeBtn.HoverState.Image = My.Resources.copy
-                maximizeBtn.PressedState.Image = My.Resources.copy
-                Me.WindowState = FormWindowState.Maximized
-            End If
-        ElseIf sender.Equals(minimizeBtn) Then
-            Me.WindowState = FormWindowState.Minimized
         ElseIf sender.Equals(addStudentBtn) Then
             Dim studentModal As New StudentForm
             Try
@@ -81,11 +65,11 @@ Public Class MainWindow
         End If
         Try
             With studentsRecordView.CurrentRow.Cells
-                modal.studentNoData.Text = .Item(1).Value                                                                                        ' Student Number
-                modal.nameData.Text = .Item(2).Value & " " & .Item(3).Value                                                                      ' Student's Name
-                modal.courseData.Text = .Item(4).Value                                                                                           ' Course
-                modal.genderData.Text = If(.Item(5).Value = My.Resources.femaleInitial, My.Resources.femaleText, My.Resources.maleText)          ' Gender
-                modal.contactData.Text = .Item(6).Value                                                                                          ' Contact
+                modal.studentNoTextBox.Text = .Item(1).Value                                                                                        ' Student Number
+                modal.nameTextBox.Text = .Item(2).Value & " " & .Item(3).Value                                                                      ' Student's Name
+                modal.courseTextBox.Text = .Item(4).Value                                                                                           ' Course
+                modal.genderTextBox.Text = If(.Item(5).Value = My.Resources.femaleInitial, My.Resources.femaleText, My.Resources.maleText)          ' Gender
+                modal.contactTextBox.Text = .Item(6).Value                                                                                          ' Contact
                 Dim id As Integer = If(IsNumeric(.Item(8).Value), .Item(8).Value, Nothing)                                                       ' profile id
 
                 ' Check the profile if it exists in the profile table.

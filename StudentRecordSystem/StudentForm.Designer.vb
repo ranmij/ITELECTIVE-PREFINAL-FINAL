@@ -79,7 +79,7 @@ Partial Class StudentForm
         '
         Me.studentNoLabel.BackColor = System.Drawing.Color.Transparent
         Me.studentNoLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.studentNoLabel.Location = New System.Drawing.Point(46, 197)
+        Me.studentNoLabel.Location = New System.Drawing.Point(31, 197)
         Me.studentNoLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.studentNoLabel.Name = "studentNoLabel"
         Me.studentNoLabel.Size = New System.Drawing.Size(116, 27)
@@ -90,7 +90,7 @@ Partial Class StudentForm
         '
         Me.firstNameLabel.BackColor = System.Drawing.Color.Transparent
         Me.firstNameLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNameLabel.Location = New System.Drawing.Point(46, 232)
+        Me.firstNameLabel.Location = New System.Drawing.Point(31, 232)
         Me.firstNameLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.firstNameLabel.Name = "firstNameLabel"
         Me.firstNameLabel.Size = New System.Drawing.Size(106, 27)
@@ -101,7 +101,7 @@ Partial Class StudentForm
         '
         Me.lastNameLabel.BackColor = System.Drawing.Color.Transparent
         Me.lastNameLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lastNameLabel.Location = New System.Drawing.Point(46, 267)
+        Me.lastNameLabel.Location = New System.Drawing.Point(31, 267)
         Me.lastNameLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.lastNameLabel.Name = "lastNameLabel"
         Me.lastNameLabel.Size = New System.Drawing.Size(103, 27)
@@ -112,7 +112,7 @@ Partial Class StudentForm
         '
         Me.courseLabel.BackColor = System.Drawing.Color.Transparent
         Me.courseLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.courseLabel.Location = New System.Drawing.Point(46, 302)
+        Me.courseLabel.Location = New System.Drawing.Point(31, 302)
         Me.courseLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.courseLabel.Name = "courseLabel"
         Me.courseLabel.Size = New System.Drawing.Size(75, 27)
@@ -123,7 +123,7 @@ Partial Class StudentForm
         '
         Me.departmentLabel.BackColor = System.Drawing.Color.Transparent
         Me.departmentLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.departmentLabel.Location = New System.Drawing.Point(46, 372)
+        Me.departmentLabel.Location = New System.Drawing.Point(31, 372)
         Me.departmentLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.departmentLabel.Name = "departmentLabel"
         Me.departmentLabel.Size = New System.Drawing.Size(122, 27)
@@ -141,13 +141,13 @@ Partial Class StudentForm
         Me.studentNoTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.studentNoTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.studentNoTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.studentNoTextBox.Location = New System.Drawing.Point(196, 197)
+        Me.studentNoTextBox.Location = New System.Drawing.Point(181, 197)
         Me.studentNoTextBox.MaxLength = 6
         Me.studentNoTextBox.Name = "studentNoTextBox"
         Me.studentNoTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.studentNoTextBox.PlaceholderText = ""
         Me.studentNoTextBox.SelectedText = ""
-        Me.studentNoTextBox.Size = New System.Drawing.Size(258, 27)
+        Me.studentNoTextBox.Size = New System.Drawing.Size(198, 27)
         Me.studentNoTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.studentNoTextBox.TabIndex = 7
         '
@@ -162,12 +162,12 @@ Partial Class StudentForm
         Me.firstNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.firstNameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.firstNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.firstNameTextBox.Location = New System.Drawing.Point(196, 232)
+        Me.firstNameTextBox.Location = New System.Drawing.Point(181, 232)
         Me.firstNameTextBox.Name = "firstNameTextBox"
         Me.firstNameTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.firstNameTextBox.PlaceholderText = ""
         Me.firstNameTextBox.SelectedText = ""
-        Me.firstNameTextBox.Size = New System.Drawing.Size(258, 27)
+        Me.firstNameTextBox.Size = New System.Drawing.Size(198, 27)
         Me.firstNameTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.firstNameTextBox.TabIndex = 8
         '
@@ -182,12 +182,12 @@ Partial Class StudentForm
         Me.lastNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.lastNameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.lastNameTextBox.Location = New System.Drawing.Point(196, 267)
+        Me.lastNameTextBox.Location = New System.Drawing.Point(181, 267)
         Me.lastNameTextBox.Name = "lastNameTextBox"
         Me.lastNameTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.lastNameTextBox.PlaceholderText = ""
         Me.lastNameTextBox.SelectedText = ""
-        Me.lastNameTextBox.Size = New System.Drawing.Size(258, 27)
+        Me.lastNameTextBox.Size = New System.Drawing.Size(198, 27)
         Me.lastNameTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.lastNameTextBox.TabIndex = 9
         '
@@ -202,13 +202,13 @@ Partial Class StudentForm
         Me.courseTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.courseTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.courseTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.courseTextBox.Location = New System.Drawing.Point(196, 302)
+        Me.courseTextBox.Location = New System.Drawing.Point(181, 302)
         Me.courseTextBox.MaxLength = 50
         Me.courseTextBox.Name = "courseTextBox"
         Me.courseTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.courseTextBox.PlaceholderText = ""
         Me.courseTextBox.SelectedText = ""
-        Me.courseTextBox.Size = New System.Drawing.Size(258, 27)
+        Me.courseTextBox.Size = New System.Drawing.Size(198, 27)
         Me.courseTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.courseTextBox.TabIndex = 10
         '
@@ -217,7 +217,7 @@ Partial Class StudentForm
         Me.studentProfilePicture.BorderRadius = 2
         Me.studentProfilePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.studentProfilePicture.ImageRotate = 0!
-        Me.studentProfilePicture.Location = New System.Drawing.Point(169, 31)
+        Me.studentProfilePicture.Location = New System.Drawing.Point(112, 29)
         Me.studentProfilePicture.Name = "studentProfilePicture"
         Me.studentProfilePicture.Size = New System.Drawing.Size(184, 149)
         Me.studentProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -234,7 +234,7 @@ Partial Class StudentForm
         Me.addImage.ImageOffset = New System.Drawing.Point(0, 0)
         Me.addImage.ImageRotate = 0!
         Me.addImage.ImageSize = New System.Drawing.Size(24, 24)
-        Me.addImage.Location = New System.Drawing.Point(232, 78)
+        Me.addImage.Location = New System.Drawing.Point(174, 76)
         Me.addImage.Name = "addImage"
         Me.addImage.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.upload
         Me.addImage.PressedState.ImageSize = New System.Drawing.Size(24, 24)
@@ -259,7 +259,7 @@ Partial Class StudentForm
         Me.addStudentBtn.HoverState.FillColor = System.Drawing.Color.Black
         Me.addStudentBtn.HoverState.FillColor2 = System.Drawing.Color.Black
         Me.addStudentBtn.HoverState.ForeColor = System.Drawing.Color.White
-        Me.addStudentBtn.Location = New System.Drawing.Point(358, 463)
+        Me.addStudentBtn.Location = New System.Drawing.Point(242, 454)
         Me.addStudentBtn.Name = "addStudentBtn"
         Me.addStudentBtn.Size = New System.Drawing.Size(137, 33)
         Me.addStudentBtn.TabIndex = 16
@@ -276,14 +276,15 @@ Partial Class StudentForm
         Me.departmentComboBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.departmentComboBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.departmentComboBox.ItemHeight = 30
-        Me.departmentComboBox.Location = New System.Drawing.Point(196, 372)
+        Me.departmentComboBox.Location = New System.Drawing.Point(181, 372)
         Me.departmentComboBox.Name = "departmentComboBox"
-        Me.departmentComboBox.Size = New System.Drawing.Size(258, 36)
+        Me.departmentComboBox.Size = New System.Drawing.Size(198, 36)
         Me.departmentComboBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.departmentComboBox.TabIndex = 17
         '
         'closeStudentForm
         '
+        Me.closeStudentForm.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.closeStudentForm.BackColor = System.Drawing.Color.Transparent
         Me.closeStudentForm.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.closeStudentForm.HoverState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
@@ -292,7 +293,7 @@ Partial Class StudentForm
         Me.closeStudentForm.ImageOffset = New System.Drawing.Point(0, 0)
         Me.closeStudentForm.ImageRotate = 0!
         Me.closeStudentForm.ImageSize = New System.Drawing.Size(16, 16)
-        Me.closeStudentForm.Location = New System.Drawing.Point(473, 1)
+        Me.closeStudentForm.Location = New System.Drawing.Point(385, 1)
         Me.closeStudentForm.Name = "closeStudentForm"
         Me.closeStudentForm.PressedState.Image = Global.StudentRecordSystem.My.Resources.Resources.close
         Me.closeStudentForm.PressedState.ImageSize = New System.Drawing.Size(16, 16)
@@ -308,7 +309,7 @@ Partial Class StudentForm
         Me.femaleRadioBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.femaleRadioBtn.CheckedState.InnerColor = System.Drawing.Color.White
         Me.femaleRadioBtn.CheckedState.InnerOffset = -4
-        Me.femaleRadioBtn.Location = New System.Drawing.Point(196, 414)
+        Me.femaleRadioBtn.Location = New System.Drawing.Point(181, 414)
         Me.femaleRadioBtn.Name = "femaleRadioBtn"
         Me.femaleRadioBtn.Size = New System.Drawing.Size(67, 21)
         Me.femaleRadioBtn.TabIndex = 19
@@ -326,7 +327,7 @@ Partial Class StudentForm
         Me.maleRadioBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.maleRadioBtn.CheckedState.InnerColor = System.Drawing.Color.White
         Me.maleRadioBtn.CheckedState.InnerOffset = -4
-        Me.maleRadioBtn.Location = New System.Drawing.Point(399, 414)
+        Me.maleRadioBtn.Location = New System.Drawing.Point(324, 414)
         Me.maleRadioBtn.Name = "maleRadioBtn"
         Me.maleRadioBtn.Size = New System.Drawing.Size(55, 21)
         Me.maleRadioBtn.TabIndex = 20
@@ -340,7 +341,7 @@ Partial Class StudentForm
         '
         Me.phoneNumberLabel.BackColor = System.Drawing.Color.Transparent
         Me.phoneNumberLabel.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.phoneNumberLabel.Location = New System.Drawing.Point(46, 337)
+        Me.phoneNumberLabel.Location = New System.Drawing.Point(31, 337)
         Me.phoneNumberLabel.Margin = New System.Windows.Forms.Padding(4)
         Me.phoneNumberLabel.Name = "phoneNumberLabel"
         Me.phoneNumberLabel.Size = New System.Drawing.Size(67, 27)
@@ -358,13 +359,13 @@ Partial Class StudentForm
         Me.phoneNumberTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.phoneNumberTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.phoneNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(111, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.phoneNumberTextBox.Location = New System.Drawing.Point(196, 337)
+        Me.phoneNumberTextBox.Location = New System.Drawing.Point(181, 337)
         Me.phoneNumberTextBox.MaxLength = 20
         Me.phoneNumberTextBox.Name = "phoneNumberTextBox"
         Me.phoneNumberTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.phoneNumberTextBox.PlaceholderText = ""
         Me.phoneNumberTextBox.SelectedText = ""
-        Me.phoneNumberTextBox.Size = New System.Drawing.Size(258, 27)
+        Me.phoneNumberTextBox.Size = New System.Drawing.Size(198, 27)
         Me.phoneNumberTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material
         Me.phoneNumberTextBox.TabIndex = 22
         '
@@ -372,7 +373,7 @@ Partial Class StudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(507, 508)
+        Me.ClientSize = New System.Drawing.Size(418, 508)
         Me.Controls.Add(Me.phoneNumberTextBox)
         Me.Controls.Add(Me.phoneNumberLabel)
         Me.Controls.Add(Me.maleRadioBtn)

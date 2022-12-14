@@ -227,9 +227,14 @@ StudentRecordSystem
   Looks up a localized string similar to Success!.
 </summary>
 </member>
+<member name="P:StudentRecordSystem.My.Resources.Resources.successDeleteText">
+<summary>
+  Looks up a localized string similar to Student has been delete successfully..
+</summary>
+</member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.successStudentText">
 <summary>
-  Looks up a localized string similar to Student has been updated!.
+  Looks up a localized string similar to Student has been updated successfully..
 </summary>
 </member>
 <member name="P:StudentRecordSystem.My.Resources.Resources.unknownErrrorText">

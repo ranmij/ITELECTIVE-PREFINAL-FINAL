@@ -18,3 +18,23 @@ D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\bin\Debug\sr
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\bin\Debug\srsdb_log.ldf
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\obj\Debug\StudentRecordSystem.Modal.resources
 D:\Applications\VS\projects\StudentRecordSystem\StudentRecordSystem\obj\Debug\StudentRecordSystem.StudentForm.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\srsdb.mdf
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\srsdb_log.ldf
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\StudentRecordSystem.exe.config
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\StudentRecordSystem.exe
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\StudentRecordSystem.pdb
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\StudentRecordSystem.xml
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\bin\Debug\Guna.UI2.dll
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.vbproj.AssemblyReference.cache
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.vbproj.SuggestedBindingRedirects.cache
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.MainWindow.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.Modal.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.SplashScreen.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.Resources.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.StudentForm.resources
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.vbproj.GenerateResource.cache
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.vbproj.CoreCompileInputs.cache
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.vbproj.CopyComplete
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.exe
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.xml
+C:\Users\MEMENTO MORI\Source\Repos\ITELECTIVE-PREFINAL-FINAL\StudentRecordSystem\obj\Debug\StudentRecordSystem.pdb

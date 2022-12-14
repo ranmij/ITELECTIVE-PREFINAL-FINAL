@@ -241,8 +241,11 @@
   <data name="successCaption" xml:space="preserve">
     <value>Success!</value>
   </data>
+  <data name="successDeleteText" xml:space="preserve">
+    <value>Student has been delete successfully.</value>
+  </data>
   <data name="successStudentText" xml:space="preserve">
-    <value>Student has been updated!</value>
+    <value>Student has been updated successfully.</value>
   </data>
   <data name="unknownErrrorText" xml:space="preserve">
     <value>An error occured please try again.</value>
